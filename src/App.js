@@ -7,7 +7,6 @@ import HomePage from "./components/HomePage";
 import ChangePlan from "./components/ChangePlan";
 import ChangeLevel from "./components/ChangeLevel";
 import CancelPolicy from "./components/CancelPolicy";
-import Notification from './components/Notification';
 import AddEmployee from './components/AddEmployee';
 import AuthContext from "./store/auth-context";
 import ForgotPassword from "./components/ForgotPassword";
@@ -108,7 +107,7 @@ const history = useHistory();
           />
         </Route>}
         {RoleAdmin && LoggedIn && <Route path="/Notification" exact>
-          <Notification NotificationData={AllData} fetchingNotification={onFetchDataRequests} />
+          <DataTable NotificationData={AllData} fetchingNotification={onFetchDataRequests} />
         </Route>}
         {RoleAdmin && LoggedIn && <Route path='/AddEmployee' exact>
           <AddEmployee />
